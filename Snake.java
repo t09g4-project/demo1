@@ -20,25 +20,20 @@ public class Snake {
       while (true) {
          System.out.println("Use AWSD to move the snake, Press Q to quit the game");
          String choice = scanner.next();
-         switch (choice) {
+         switch (choice.toLowerCase()) {
             case "a":
-            case "A":
                move = 2;
                break;
             case "s":
-            case "S":
                move = 1;
                break;
             case "w":
-            case "W":
                move = 3;
                break;
             case "d":
-            case "D":
                move = 0;
                break;
             case "q":
-            case "Q":
                int points=snakebody.snakePoints.size();
                snake.putGameOverInMap(points);
             default:
